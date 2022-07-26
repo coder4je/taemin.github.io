@@ -1,1 +1,3 @@
-# taemin.github.io
+# my-website
+
+Taemin's personal website
