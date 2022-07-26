@@ -1,3 +1,1 @@
-# my-website
-
-Taemin's personal website
+# Website is coming up..
