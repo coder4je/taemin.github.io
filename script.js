@@ -1,19 +1,43 @@
-const toggleSwitch = document.getElementById('toggle');
+let slideIndex = 0;
+showSlide();
 
-var today = new Date();
-const targetDay = new Date("08/26/2022");
-let remainingDays = (targetDay - today)/(1000 * 3600 * 24);
+function showSlide(){
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(showSlide, 2000);
+}
 
+let logo = "About Taemin"
+let newLogo = "Portfolio"
+const header = document.querySelector(".logo");
+const sectionOne = document.querySelector(".main_section");
 
-toggleSwitch.addEventListener('change', function() {
-  if (this.checked){
-    document.body.style.backgroundColor = 'white';
-    document.getElementById('days').value = Math.ceil(remainingDays);
-    document.getElementById('days').style.backgroundColor = 'white';  
-  } else {
-    document.body.style.backgroundColor = 'black';
-    document.getElementById('days').style.backgroundColor = 'black';
-  } 
-});
+const sectionOneOptions = {
+};
 
+const sectionOneObserver = new IntersectionObserver(function(
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      header.innerHTML = newLogo;
+    } else {
+      header.innerHTML = logo;
+    }
+  });
+},
+sectionOneOptions);
 
+sectionOneObserver.observe(sectionOne);
