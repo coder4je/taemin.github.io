@@ -19,7 +19,7 @@ function showSlide(){
   setTimeout(showSlide, 2000);
 }
 
-// Logo change
+// Logo change by scroll
 
 let logo = "About Taemin"
 let main = "Main Section"

@@ -101,7 +101,6 @@
 }
 
 .column_left {
-  /* border: 1px solid red; */
   margin-left: 2rem;
   max-width: 600px;
   display: flex;
@@ -112,7 +111,6 @@
 }
 
 .column_right {
-  /* border: 1px solid blue; */
   margin-right: 2rem;
   max-width: 600px;
   display: flex;
