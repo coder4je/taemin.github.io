@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <title>My Personal Website</title>
-    
-    <script
-      src="https://kit.fontawesome.com/e655d06e26.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          About Taemin
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>My Personal Website</title>
+
+  <script src="https://kit.fontawesome.com/e655d06e26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="logo">
+    About Taemin
+  </div>
+  <br>
+  <br>
+  <!-- About page -->
+  <div class="main_section">
+    <div class="column_left">
+      <img src="./image/profile.png" alt="">
+    </div>
+    <div class="column_right">
+      <i class="fa-sharp fa-solid fa-quote-left"></i>
+      <h1>
+        Hi, my name is Taemin Kim.
+        I am a software engineer.
+      </h1>
+      <p>
+        I love to make useful apps that can be beneficial for people in the world.
+      </p>
+      <i class="fa-sharp fa-solid fa-quote-right"></i>
+    </div>
+  </div>
+  <!-- Portfolio -->
+  <br>
+  <hr class="solid">
+  <br>
+  <section class="portfolio_intro"></section>
+  <div class="portfolio">
+    <div class="column_left">
+      <h1>The Cube</h1>
+      <p>Centralize all project schedules, tasks and processes into one application.Easy-to-use teamwork platform</p>
+      <div class="language-icons">
+        <img src="./image/js.png" alt="">
+        <img src="./image/redux.png" alt="">
+        <img src="./image/ruby.png" alt="">
+        <img src="./image/rails.png" alt="">
+      </div>
+    </div>
+    <div class="column_right">
+      <div class="portfolio-container">
+        <div class="mySlides fade">
+          <img src="./image/2.png" alt="cube">
         </div>
-      </nav>
-    </header>
-    <!-- About page -->
-      <div class="main_section">
-        <div class="column_left">
-          <img src="./image/profile.png" alt="">
+        <div class="mySlides fade">
+          <img src="./image/1.png" alt="cube">
         </div>
-        <div class="column_right">
-          <i class="fa-sharp fa-solid fa-quote-left"></i>
-          <h1>
-            Hi, my name is Taemin Kim.
-            I am a software engineer.
-          </h1>
-          <p>
-            I love to make useful apps that can be beneficial for people in the world.
-          </p> 
-          <i class="fa-sharp fa-solid fa-quote-right"></i>
+        <div class="mySlides fade">
+          <img src="./image/3.png" alt="cube">
+        </div>
+        <div class="dot_container">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
-      <!-- Portfolio -->
-      <br>
-      <hr class="solid">
-      <br>
-      <section class="portfolio_intro"></section>
-      <div class="portfolio">
-          <div class="column_left">
-            <h1>The Cube</h1>
-            <p>Centralize all project schedules, tasks and processes into one application.Easy-to-use teamwork platform</p>
-            <div class="language-icons">
+    </div>
+  </div>
+  <br>
+  <hr class="solid">
+  <br>
+  <footer class="contact-me">
+    <div class="name">Taemin Kim</div>
+    <img src="./image/brush1.png" alt="">
+    <div class="footer-icons">
+      <a class="gmail" href="mailto:taeminkimny@gmail.com" aria-label="send an email"><i
+          class="fa-sharp fa-solid fa-envelope fa-5x"></i></a>
+      <a class="gitHub" href="https://github.com/coder4je" aria-label="gitHub link"><i
+          class="fa-brands fa-square-github fa-5x"> </i></a>
+      <a class="linkedIn" href="https://www.linkedin.com/in/taeminkimny/" aria-label="linked in link">
+        <i class="fa-brands fa-linkedin fa-5x"></i>
+      </a>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
 
-              <img src="./image/js.png" alt="">
-            </div>
-          </div>
-          <div class="column_right">
-            <div class="portfolio-container">
-              <div class="mySlides fade">
-                <img src="./image/2.png" alt="cube">
-              </div>
-              <div class="mySlides fade">
-                <img src="./image/1.png" alt="cube">
-              </div>
-              <div class="mySlides fade">
-                <img src="./image/3.png" alt="cube">
-              </div>
-            </div>
-            <br>
-            <div class="dot_container">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
-      </div>
-      <br>
-      <hr class="solid">
-      <br>
-      <footer class="contact-me">
-        <div class="name">Taemin Kim</div>
-        <img src="./image/brush1.png" alt="">
-        <div class="footer-icons">
-
-          <i class="fa-sharp fa-solid fa-envelope fa-5x"></i>
-          <i class="fa-brands fa-square-github fa-5x"></i>
-          <i class="fa-brands fa-linkedin fa-5x"></i>
-        </div>
-      </footer>
-    <script src="script.js" defer></script>
-  </body>
 </html>

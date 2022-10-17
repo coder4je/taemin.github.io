@@ -1,58 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat Alternates', sans-serif;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  position: fixed;
-
-  z-index: 100;
-  background: transparent;
-  padding: 0rem calc((100vw -  1400px) / 2);
 }
 
 .logo {
-  margin-left: 2rem;
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 2rem;
+  position: fixed;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: clamp(1rem, 2vw, 4rem);
+  z-index: 1;
+  margin-left: 1rem;
 }
-
-.nav-links{
-  margin-right: 2rem;
-}
-
 
 .main_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: white;
   color: black;
-  height: 50vh;
-  padding: 0rem calc((100vw -  1400px) / 2);
+  height: 80vh;
+  top: 10%;
+  padding: 0rem calc((100vw - 1400px) / 2);
   overflow-x: hidden;
   position: relative;
 }
 
+.main_section img{
+  padding: 10%;
+  margin-right: 10%;
+  align-items: center;
+  width: 100%;
+}
+
 .main_section h1 {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding: 10%;
   font-size: clamp(2rem, 4vw, 4rem);
   line-height: 1.5;
 }
 
 .main_section P {
-  padding-bottom: 3rem;
+  padding: 10%;
   font-size: clamp(1rem, 4vw, 2rem);
   line-height: 1.5;
 }
@@ -60,41 +48,56 @@ nav {
 .main_section i {
   font-size: 3rem;
   margin: 0 auto;
-  color: #e1dee9
-}
-
-.main_section img {
-  max-width: 600px;
-  height: 700px;
+  color: darkgray;
 }
 
 /* Portfolio */
-.portfolio{
+.portfolio {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: white;
   color: black;
-  height: 50vh;
-  padding: 0rem calc((100vw -  1400px) / 2);
-  overflow-x: hidden;
-  position: relative;
+  height: 80vh;
+  padding: 0rem calc((100vw - 1400px) / 2);
 }
 
+@media screen and (max-width: 768px) {
+  .main_section {
+    grid-template-columns: 1fr;
+    margin: auto;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  .portfolio {
+    grid-template-columns: 1fr;
+    margin: auto;
+    text-align: center;
+  }
+  .language-icons img {
+    width: 50px;
+  }
+}
 
-.portfolio h1 {  
-  padding-bottom: 3rem;
+.portfolio h1 {
+  padding: 10%;
   font-size: clamp(1rem, 10vw, 4rem);
   text-transform: uppercase;
 }
 
 .portfolio P {
-  padding-bottom: 3rem;
+  padding: 10%;
   font-size: clamp(1rem, 4vw, 2rem);
   line-height: 1.5;
 }
 
 .language-icons{
-  width: 400px ;
+  width: 100%;
+  text-align: center;
+}
+
+.language-icons img {
+  padding: 0 0.5rem;
 }
 
 .column_left {
@@ -105,9 +108,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 700px;
   position: relative;
-  z-index: 1;
 }
 
 .column_right {
@@ -117,31 +118,28 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  /* z-index: 1; */
+  align-items: center;
   position: relative;
 }
 
-.portfolio-container{
+.portfolio-container {
   margin: auto;
 }
 
-.dot_container{
-  margin-left: 45%;
-  margin-bottom: 20%;
-}
-
-.mySlides{
+.mySlides {
   display: none;
-  margin-left: -25%;
+  margin: auto;
 }
 
-.mySlides img{
+.mySlides img {
   vertical-align: center;
-  width: 1200px;
+  width: 100%;
+}
+.dot_container{
+text-align: center;
 }
 
-.dot{
+.dot {
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -151,7 +149,7 @@ nav {
   transition: background-color 0.6s ease;
 }
 
-.active{
+.active {
   background-color: #717171;
 }
 
@@ -161,48 +159,41 @@ nav {
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* .contact-me{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: white;
-  color: black;
-  height: 50vh;
-  padding: 0rem calc((100vw -  1400px) / 2);
-  overflow-x: hidden;
-  position: relative;
-} */
-
-hr.solid{
+hr.solid {
   border-top: 3px solid #bbb;
   width: 80%;
   margin: 3em auto;
 }
 
-.contact-me{
+.contact-me {
   height: 50vh;
   position: relative;
 }
 
 .name {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
   position: absolute;
-  font-size: 100px;
+  font-size: 5rem;
   right: 10%;
-  bottom: 17%;
+  bottom: 28%;
 }
 
-.contact-me img{
+.contact-me img {
   position: absolute;
   right: 0;
-  bottom: 12%;
-  width: 400px;
+  bottom: 18%;
+  width: 32rem;
 }
 
-.footer-icons{
+.footer-icons {
   display: inline-block;
   justify-content: space-between;
   position: absolute;
@@ -210,6 +201,30 @@ hr.solid{
   bottom: 10%;
 }
 
-.footer-icons i{
-  padding: 2rem;
+.footer-icons i {
+  font-size: 4rem;
+  padding: 10px;
+}
+
+.fa-sharp {
+  color: #ea4336;
+}
+.fa-brands {
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-me{
+    height: 40vh;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .contact-me img {
+    width: 10rem;
+  }
+  .footer-icons i {
+    font-size: 32px;
+    padding: 0.5rem;
+  }
 }

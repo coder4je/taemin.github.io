@@ -1,3 +1,4 @@
+// Image Slide 
 let slideIndex = 0;
 showSlide();
 
@@ -18,10 +19,14 @@ function showSlide(){
   setTimeout(showSlide, 2000);
 }
 
+// Logo change
+
 let logo = "About Taemin"
+let main = "Main Section"
 let newLogo = "Portfolio"
 const header = document.querySelector(".logo");
 const sectionOne = document.querySelector(".main_section");
+const Portfolio = document.querySelector(".portfolio");
 
 const sectionOneOptions = {
 };
@@ -33,7 +38,8 @@ const sectionOneObserver = new IntersectionObserver(function(
   entries.forEach(entry => {
     if(!entry.isIntersecting) {
       header.innerHTML = newLogo;
-    } else {
+    } 
+    else {
       header.innerHTML = logo;
     }
   });
@@ -41,3 +47,8 @@ const sectionOneObserver = new IntersectionObserver(function(
 sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
+
+// Contact links
+const email = document.querySelector(".gamil").style.color = "pink";
+const gitHub = document.querySelector(".gitHub").style.color = "pink";
+const linkedIn = document.querySelector(".linkedIn").style.color = "pink";
